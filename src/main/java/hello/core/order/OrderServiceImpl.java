@@ -14,8 +14,6 @@ public class OrderServiceImpl implements OrderService {
         this.discountPolicy = discountPolicy;
     }
 
-//    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();  -> DIP 위배
-//    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); -> DIP 위배
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
