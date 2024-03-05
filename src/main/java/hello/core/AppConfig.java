@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     // Bean이라는 어노테이션을 달면 memberService(), memberRepository() 와 같은 것들이 스프링 컨테이너에 등록됨
+    // 스프링 컨테이너에는 스프링 빈 저장소가 존재
+    // 빈 이름에 memberService, 빈 객체에 MemberServiceImpl 이런식으로 key, value처럼 들어감
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository()); // 생성자 주입
